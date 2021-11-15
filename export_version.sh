@@ -4,7 +4,6 @@
 # DOCKER_IMAGE="alehmudrak/github-action:"
 # --- delete ---
 
-cd $HOME
 COMMIT=$(git log -1 --pretty=tformat:%h)
 BRANCH=$(git branch --show-current)
 LASTTAG=$(git describe --tags --abbrev=0 | sed 's/[^.0-9]*//g')
