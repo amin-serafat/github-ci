@@ -1,1 +1,0 @@
-alehmudrak/github-action:0.3
