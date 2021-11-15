@@ -1,10 +1,10 @@
 #!/bin/bash
-# cd $HOME
 # --- For test --- delete ---
 # cd ../github-action/
 # DOCKER_IMAGE="alehmudrak/github-action:"
 # --- delete ---
 
+cd $HOME
 COMMIT=$(git log -1 --pretty=tformat:%h)
 BRANCH=$(git branch --show-current)
 LASTTAG=$(git describe --tags --abbrev=0 | sed 's/[^.0-9]*//g')
