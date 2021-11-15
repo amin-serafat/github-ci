@@ -1,4 +1,5 @@
 #!/bin/bash
+cd ..
 echo "--- Build image ---"
 echo "Project version: ${{  steps.Export_Version.outputs.PROJECT_VERSION  }}"
 IMAGE_NAME=${{  steps.Export_Version.outputs.PROJECT_VERSION  }}
