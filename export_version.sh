@@ -1,11 +1,6 @@
 #!/bin/bash
-# DOCKER_IMAGE="alehmudrak/github-action:"
+set -euo pipefail
 
 [ -d /version/ ] || sudo mkdir -p /version/
-COMMIT=$(git log -1 --pretty=tformat:%h)
-BRANCH=$(git branch --show-current)
-LASTTAG=$(git describe --tags --abbrev=0 | sed 's/[^.0-9]*//g')
-echo $DOCKER_IMAGE$LASTTAG > version.txt
+git describe --tags --abbrev=0 | sed 's/[^.0-9]*//g' > version.txt
 sudo mv version.txt /version/
-
-cat /version/version.txt
