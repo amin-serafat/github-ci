@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+# set -euo pipefail
 
 echo "--- Create folder /version/ and move all txt files here ---"
 [ -d /version/ ] || sudo mkdir /version/
