@@ -3,8 +3,8 @@ set -euo pipefail
 
 [ -d /version/ ] || sudo mkdir -p /version/
 
-DOCKERHUBACCOUNT=$(echo DOCKERHUBACCOUNT.txt)
-DOCKERREPOSITORY=$(echo DOCKERREPOSITORY.txt)
+DOCKERHUBACCOUNT=$(echo /version/DOCKERHUBACCOUNT.txt)
+DOCKERREPOSITORY=$(echo /version/DOCKERREPOSITORY.txt)
 
 $TEGVERSION=$($BRANCH-$COMMIT)
 echo $TEGVERSION > teg_version.txt

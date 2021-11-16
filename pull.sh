@@ -2,8 +2,8 @@
 set -euo pipefail
 
 echo "--- Build image ---"
-DOCKERHUBACCOUNT=$(echo DOCKERHUBACCOUNT.txt)
-DOCKERREPOSITORY=$(echo DOCKERREPOSITORY.txt)
-$TEGVERSION=$(echo teg_version.txt)
+DOCKERHUBACCOUNT=$(echo /version/DOCKERHUBACCOUNT.txt)
+DOCKERREPOSITORY=$(echo /version/DOCKERREPOSITORY.txt)
+$TEGVERSION=$(echo /version/teg_version.txt)
 
 docker pull "$DOCKERHUBACCOUNT/$DOCKERREPOSITORY:$TEGVERSION"
