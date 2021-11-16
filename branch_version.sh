@@ -1,10 +1,10 @@
 #!/bin/bash
 set -euo pipefail
 
-[ -d /version/ ] || sudo mkdir -p /version/
+echo "--- Create Tag by Branch and Last Commit image ---"
 
-BRANCH=$(echo DOCKERHUBACCOUNT.txt)
-COMMIT=$(echo DOCKERREPOSITORY.txt)
+BRANCH=$(cat DOCKERHUBACCOUNT.txt)
+COMMIT=$(cat DOCKERREPOSITORY.txt)
 
 TEGVERSION=$(echo "$BRANCH-$COMMIT")
 echo $TEGVERSION > teg_version.txt
