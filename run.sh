@@ -1,9 +1,9 @@
 #!/bin/bash
 set -euo pipefail
 
-echo "--- Build image ---"
+echo "--- Run image ---"
 DOCKERHUBACCOUNT=$(echo DOCKERHUBACCOUNT.txt)
 DOCKERREPOSITORY=$(echo DOCKERREPOSITORY.txt)
 $TEGVERSION=$(echo teg_version.txt)
 
-docker build . --file Dockerfile --tag "$DOCKERHUBACCOUNT/$DOCKERREPOSITORY:$TEGVERSION"
+docker run -p 8080:8080 -d "$DOCKERHUBACCOUNT/$DOCKERREPOSITORY:$TEGVERSION"
