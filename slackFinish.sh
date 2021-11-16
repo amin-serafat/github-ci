@@ -1,9 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-sudo apt update
-sudo apt install curl
-
 echo "--- Send meesage to Slack ---"
 
 curl -X POST -H 'Content-type: application/json' \
