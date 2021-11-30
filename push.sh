@@ -5,6 +5,6 @@ echo "--- Push image ---"
 
 DOCKERHUBACCOUNT=$(cat /version/DOCKERHUBACCOUNT.txt)
 DOCKERREPOSITORY=$(cat /version/DOCKERREPOSITORY.txt)
-TEGVERSION=$(cat /version/teg_version.txt)
+TAGVERSION=$(cat /version/tag_version.txt)
 
-docker push "$DOCKERHUBACCOUNT/$DOCKERREPOSITORY:$TEGVERSION"
+docker push "$DOCKERHUBACCOUNT/$DOCKERREPOSITORY:$TAGVERSION"

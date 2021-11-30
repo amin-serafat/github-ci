@@ -5,6 +5,6 @@ echo "--- Pull image ---"
 
 DOCKERHUBACCOUNT=$(cat /version/DOCKERHUBACCOUNT.txt)
 DOCKERREPOSITORY=$(cat /version/DOCKERREPOSITORY.txt)
-TEGVERSION=$(cat /version/teg_version.txt)
+TAGVERSION=$(cat /version/tag_version.txt)
 
-docker pull "$DOCKERHUBACCOUNT/$DOCKERREPOSITORY:$TEGVERSION"
+docker pull "$DOCKERHUBACCOUNT/$DOCKERREPOSITORY:$TAGVERSION"

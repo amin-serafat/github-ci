@@ -5,6 +5,6 @@ echo "--- Build image ---"
 
 DOCKERHUBACCOUNT=$(cat /version/DOCKERHUBACCOUNT.txt)
 DOCKERREPOSITORY=$(cat /version/DOCKERREPOSITORY.txt)
-TEGVERSION=$(cat /version/teg_version.txt)
+TAGVERSION=$(cat /version/tag_version.txt)
 
-docker build . --file Dockerfile --tag "$DOCKERHUBACCOUNT/$DOCKERREPOSITORY:$TEGVERSION"
+docker build . --file Dockerfile --tag "$DOCKERHUBACCOUNT/$DOCKERREPOSITORY:$TAGVERSION"
